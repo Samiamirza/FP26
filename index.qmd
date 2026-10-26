@@ -28,7 +28,7 @@ To learn more markdown, create a copy of the file (version at course start if wa
 - [ ] link "version at course start" to the suitable github file history URL
 - [x] add some reasonable markdown code (e.g. strikethrough, link, reference, bold, cursive, ...)
 - [ ] in Rstudio: change the chunk output location setting to "console" (changes yaml header)
-- [ ] make one single code chunk foldable (folded by default); leave all other chunks as is
+- [x] make one single code chunk foldable (folded by default); leave all other chunks as is
 - [ ] suppress the output of `updateRdwd` with a chunk option
 - [X] add a bit of text with the output of an inline code expression
 - [ ] improve the python output to not be split up (with a chunk option)
@@ -112,6 +112,8 @@ clim_py.hist(figsize=(20, 16), bins=5)
 ## Summary statistics
 
 ```{python, temperature_stats}
+#| code-fold: true
+#| code-summary: "Show summary statistics code"
 # Calculate and display some basic statistics
 print("\n=== Summary Statistics for Temperature ===")
 temp_stats = clim_py['TMK.Lufttemperatur'].describe()
