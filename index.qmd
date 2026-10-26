@@ -29,7 +29,7 @@ To learn more markdown, create a copy of the file (version at course start if wa
 - [x] add some reasonable markdown code (e.g. strikethrough, link, reference, bold, cursive, ...)
 - [ ] in Rstudio: change the chunk output location setting to "console" (changes yaml header)
 - [x] make one single code chunk foldable (folded by default); leave all other chunks as is
-- [ ] suppress the output of `updateRdwd` with a chunk option
+- [x] suppress the output of `updateRdwd` with a chunk option
 - [X] add a bit of text with the output of an inline code expression
 - [ ] improve the python output to not be split up (with a chunk option)
 - [ ] add a `knitr::kable` with a small subset of the dataset (with proper package importing)
@@ -73,6 +73,7 @@ import matplotlib, pandas
 ```
 
 ```{r, packages} 
+#| message: false
 if(!requireNamespace("rdwd", quietly=TRUE))
 	install.packages("rdwd")
 rdwd::updateRdwd(vignette=FALSE)
